@@ -1,37 +1,60 @@
 # shiftsEase - Angular Project
 
-MyShifts is an application designed to simplify the tracking of employees' work hours, aiding both employees and administrators. This app helps employees keep a record of their monthly work hours, which is crucial for calculating wages, fees, expenses, and more.
+shiftsEase is an intuitive Angular application designed to simplify the tracking of employees' work hours, providing a user-friendly experience for both employees and administrators. This solution helps employees keep a record of their monthly work hours, facilitating the calculation of wages, fees, expenses, and more.
 
-## Features
+## Technologies Used
 
-- **Employee Work Hour Tracking:** Employees can monitor their work hours effortlessly.
-- **Profit Calculation:** Calculate monthly profits based on the number of work hours.
-- **User-Friendly Interface:** Simple and clear for easy use by employees.
-- **Cross-Platform Compatibility:** Suitable for both tablets and smartphones.
-- **Authentication:**  Create accounts, log in, and reset passwords.
+- **Angular Framework:** Leverage the power of Angular for a dynamic and responsive user interface.
+- **Authentication:** Implement secure authentication through Firebase for user account management.
+- **Firestore Database:** Utilize Firestore to store and retrieve user data and work shifts seamlessly.
+
 
 ## Usage
 
-After registering an account and logging in, users can:
+After registering an account, users can:
 
-1. **View Shifts:** Easily view their shifts and filter them by name or date range.
-2. **Add New Shifts:** Add new work shifts to their records.
-3. **Edit Shifts:** Modify existing shift information, such as shift times.
-4. **Edit Account Details:** Update account information as needed.
-5. **Log Out:** Securely log out of the application.
+1. **Log In:** Access the application securely with registered credentials.
+2. **Recover Password:** Utilize the password recovery feature for account access assistance.
+3. **Upcoming Shift:** Check when the next shift is scheduled for better planning.
+4. **Recent Work History:** Quickly review the last 7 days, including details on worked days and days off.
+5. **Best Performing Month:** Discover the most profitable month, highlighting the period with the highest earnings.
+6. **View Shifts**: Easily navigate and view work shifts, with filtering options by workplace or date range for quick access.
+7. **Add New Shifts:** Effortlessly record new work shifts, providing a convenient way to update and maintain an accurate work history.
+8. **Edit Shifts:** Modify existing shift information such as shift times, ensuring flexibility to adapt to changing work schedules.
+9. **Edit Account Details:** Update account information as needed, providing users with control over their profile settings.
+10. **Log Out:** Securely log out of the application, maintaining the privacy and security of user accounts.
 
 
 ## Screenshots
 
+### Registration
 ![Registration page](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/register.png)
+
+### Login
 ![Login](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/login.png)
+
+### Password Recovery
 ![Password Recovery](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/pwd-recovery.png)
+
+### Home Page
 ![Home Page](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/home.png)
+
+### User's Shifts
 ![userShifts](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/all-shifts.png)
+
+### User's Shifts Filtered By Workplace
 ![filterWorkplace](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/filtered-workplace.png)
+
+### User's Shifts Filtered By Date To Date
 ![filterDateToDate](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/filtered-date-to-date.png)
+
+### Add Shift
 ![addShift](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/add-shift.png)
+
+### Edit Shift
 ![editShift](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/edit-shift.png)
+
+### Edit Profile
 ![editProfile](https://github.com/tarciziuu/ShiftsManagement/releases/download/Latest/edit-profile.png)
 
 
