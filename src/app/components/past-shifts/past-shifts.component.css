@@ -1,0 +1,46 @@
+.past__shifts__container {
+  background-color: white;
+
+  border: 1px solid white;
+  border-radius: 5px;
+
+  width: fit-content;
+  padding: 10px;
+  margin: 0 50px;
+}
+
+.past__shifts__ul {
+  padding-left: 20px;
+}
+
+.past__shifts__li {
+  padding-top: 5px;
+}
+
+.no__past__shifts {
+  padding: 0;
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .past__shifts__container {
+    margin-left: 0;
+  }
+}
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .past__shifts__container {
+    margin-left: 160px;
+  }
+}
+
+/* Styles for bigger tablets */
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .past__shifts__container {
+    margin-left: 130px;
+  }
+}

@@ -1,0 +1,19 @@
+<div class="forgot__pwd__container">
+  <form (ngSubmit)="onSubmit()" class="forgot__pwd__form">
+    <img src="../../../assets/logo.png" class="logo__img" />
+    <h2 class="forgot__pwd__title">Password recovery</h2>
+    <div class="forgot__pwd__field">
+      <label for="email">Email </label>
+      <input
+        type="text"
+        class="forgot__pwd__input"
+        id="email"
+        placeholder="john@doe.com"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <button type="submit" class="send__button">Send</button>
+    <a class="return__to__login" routerLink="/login">Return to Login</a>
+  </form>
+</div>

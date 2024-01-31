@@ -1,0 +1,100 @@
+<div class="edit__shift__page">
+  <div class="edit__shift__container">
+    <form
+      [formGroup]="editShiftForm"
+      (ngSubmit)="onSubmit()"
+      class="edit__shift__form"
+    >
+      <h2 class="edit__shift__title">Edit shift</h2>
+
+      <p class="error__message" *ngIf="formHasErrors">
+        All fields are required, excluding 'Comments'
+      </p>
+
+      <div class="loading-spinner" *ngIf="loading"></div>
+
+      <p class="successMessage" *ngIf="successMessage">
+        Shift updated successfully!
+      </p>
+
+      <div class="edit__shift__form__items">
+        <label for="shift__id">Shift ID</label>
+        <input
+          class="edit__shift__inputs"
+          type="text"
+          id="shift__id"
+          formControlName="shiftId"
+        />
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="shift__date">Date</label>
+        <input
+          class="edit__shift__inputs"
+          type="date"
+          id="shift__date"
+          formControlName="date"
+        />
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="start__time">Start time</label>
+        <input
+          class="edit__shift__inputs"
+          type="time"
+          id="start__time"
+          formControlName="startTime"
+        />
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="end__time">End time</label>
+        <input
+          class="edit__shift__inputs"
+          type="time"
+          id="end__time"
+          formControlName="endTime"
+        />
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="wage">Hourly wage ($)</label>
+        <input
+          class="edit__shift__inputs"
+          type="text"
+          placeholder="$40"
+          id="wage"
+          formControlName="wage"
+        />
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="workplace">Workplace</label>
+        <select
+          class="edit__shift__select"
+          id="workplace"
+          formControlName="workplace"
+        >
+          <option value="Hexagon">Hexagon</option>
+          <option value="Wawiwa">Wawiwa</option>
+          <option value="NewTech">NewTech</option>
+          <option value="Binance">Binance</option>
+        </select>
+      </div>
+
+      <div class="edit__shift__form__items">
+        <label for="comments">Comments</label>
+        <textarea
+          id="comments"
+          class="edit__shift__textarea"
+          cols="30"
+          rows="3"
+          placeholder="This is an optional field..."
+          formControlName="comments"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="update__button">UPDATE SHIFT</button>
+    </form>
+  </div>
+</div>

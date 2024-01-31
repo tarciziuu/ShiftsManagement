@@ -1,0 +1,13 @@
+.not__found__container {
+  color: white;
+  margin: 50px;
+}
+
+.not__found__container__links {
+  color: white;
+  text-decoration: none;
+}
+
+.not__found__container__links :hover {
+  border-bottom: 2px solid white;
+}

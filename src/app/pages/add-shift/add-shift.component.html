@@ -1,0 +1,94 @@
+<div class="add__shift__page">
+  <div class="add__shift__container">
+    <form
+      [formGroup]="addShiftForm"
+      (ngSubmit)="onSubmit()"
+      class="add__shift__form"
+    >
+      <h2 class="add__shift__title">Add shift</h2>
+
+      <p class="error__message" *ngIf="formHasErrors">
+        All fields are required, excluding 'Comments'
+      </p>
+
+      <div class="loading-spinner" *ngIf="loading"></div>
+
+      <p class="successMessage" *ngIf="successMessage">
+        Shift added successfully!
+      </p>
+
+      <div class="add__shift__form__items">
+        <label for="shift__date">Date</label>
+        <input
+          type="date"
+          class="add__shift__inputs"
+          id="shift__date"
+          formControlName="shiftDate"
+        />
+      </div>
+
+      <div class="add__shift__form__items">
+        <label for="start__time">Start time</label>
+        <input
+          type="time"
+          class="add__shift__inputs"
+          id="start__time"
+          formControlName="startTime"
+        />
+      </div>
+
+      <div class="add__shift__form__items">
+        <label for="end__time">End time</label>
+        <input
+          type="time"
+          class="add__shift__inputs"
+          id="end__time"
+          formControlName="endTime"
+        />
+      </div>
+
+      <div class="add__shift__form__items">
+        <label for="wage">Hourly wage ($)</label>
+        <input
+          type="text"
+          class="add__shift__inputs"
+          placeholder="$40"
+          id="wage"
+          formControlName="wage"
+        />
+      </div>
+
+      <div class="add__shift__form__items">
+        <label for="workplace">Workplace</label>
+        <select
+          name="workplace"
+          class="add__shift__select"
+          id="workplace"
+          formControlName="workplace"
+        >
+          <option value="-" disabled selected>Select an option</option>
+          <option value="Hexagon">Hexagon</option>
+          <option value="Wawiwa">Wawiwa</option>
+          <option value="NewTech">NewTech</option>
+          <option value="Binance">Binance</option>
+        </select>
+      </div>
+
+      <div class="add__shift__form__items">
+        <label for="comments">Comments</label>
+        <textarea
+          name="comments"
+          class="add__shift__textarea"
+          id="comments"
+          cols="30"
+          rows="3"
+          placeholder="This is an optional field..."
+          formControlName="comments"
+        >
+        </textarea>
+      </div>
+
+      <button type="submit" class="add__button">ADD SHIFT</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="home__container">
+  <header class="home__container__header">
+    <img class="logo" src="../../../assets/logo.png" alt="" />
+  </header>
+  <hr class="logo__hr" />
+
+  <app-upcoming-shift></app-upcoming-shift>
+  <app-past-shifts></app-past-shifts>
+
+  <div class="earnings__container">
+    <h3>Highest earnings for the current year</h3>
+    <p>
+      The most profitable month is
+      <span>{{ mostProfitableMonthInfo.month | monthName }}</span> with a total
+      earning of <span>{{ mostProfitableMonthInfo.earnings | currency }}</span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="past__shifts__container">
+  <h3>Past shifts</h3>
+
+  <ul class="past__shifts__ul">
+    <ng-container *ngIf="pastShifts.length; else noPastShifts">
+      <ng-container *ngFor="let day of last7Days">
+        <li class="past__shifts__li" *ngIf="hasShiftOnDay(day)">
+          On <span>{{ day | date : "longDate" }}</span> you worked at
+          <span>{{ getWorkplaceForDay(day) }}</span> from
+          <span>{{ getStartTimeForDay(day) }}</span> to
+          <span>{{ getEndTimeForDay(day) }}</span>
+        </li>
+
+        <li class="past__shifts__li" *ngIf="!hasShiftOnDay(day)">
+          On <span>{{ day | date : "longDate" }}</span> you had a day off.
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+
+  <ng-template #noPastShifts class="no__past__shifts">
+    <p>No past shifts in the last 7 days. Enjoy your time!</p>
+  </ng-template>
+</div>

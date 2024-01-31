@@ -1,0 +1,55 @@
+<div class="login__container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="login__form">
+    <img src="../../../assets/logo.png" class="logo__img" />
+
+    <h2 class="login__title">
+      Welcome back! <br />
+      Sign in and enjoy!
+    </h2>
+
+    <div class="login__form__items">
+      <label for="email">Email </label>
+      <input
+        type="text"
+        class="login__form__inputs"
+        id="email"
+        formControlName="email"
+        placeholder="john@doe.com"
+      />
+    </div>
+    <div
+      class="error__messages"
+      *ngIf="
+        loginForm.get('email')?.hasError('pattern') &&
+        loginForm.get('email')?.touched
+      "
+    >
+      Please enter a valid email.
+    </div>
+    <div class="error__messages" *ngIf="loginError">{{ loginError }}</div>
+
+    <div class="login__form__items">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="login__form__inputs"
+        id="password"
+        formControlName="password"
+        placeholder="yourPassword"
+      />
+    </div>
+
+    <div class="login__form__items">
+      <p><a routerLink="/register" id="create__acc">Create an account</a></p>
+      <button
+        class="login__button"
+        type="submit"
+        [disabled]="loginForm.invalid"
+      >
+        Log in
+      </button>
+    </div>
+
+    <a id="forgot__pwd" routerLink="/forgot-password">Forgot Password?</a>
+  </form>
+</div>

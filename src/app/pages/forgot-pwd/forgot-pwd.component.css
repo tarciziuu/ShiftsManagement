@@ -1,0 +1,75 @@
+.forgot__pwd__container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.forgot__pwd__form {
+  background-color: white;
+  width: 400px;
+
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+.forgot__pwd__field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+
+  min-height: 100%;
+}
+
+.logo__img {
+  margin: auto;
+}
+
+.forgot__pwd__title {
+  text-align: center;
+}
+
+.forgot__pwd__input {
+  border: none;
+  border-bottom: 2px solid #c5d0d3;
+}
+
+.forgot__pwd__input:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.send__button {
+  border: none;
+  border-radius: 3px;
+
+  color: white;
+  background-color: #c86f43;
+
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.send__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.return__to__login {
+  font-size: small;
+  font-weight: bold;
+
+  color: black;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.error__messages {
+  color: red;
+  font-size: small;
+}

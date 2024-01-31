@@ -1,0 +1,162 @@
+.shifts__page__container {
+  width: 85vw;
+}
+
+.shifts__page__header {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  padding: 15px;
+  margin: 50px;
+  max-width: fit-content;
+}
+
+#workplace__filter,
+#from__date,
+#to__date {
+  border: 1px solid black;
+}
+
+.shifts__title {
+  margin-top: 10px;
+}
+
+.search__btn {
+  border: none;
+  border-radius: 5px;
+
+  background-color: #c86f43;
+  color: white;
+
+  font-weight: bold;
+  padding: 5px 10px;
+  cursor: pointer;
+
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#workplace__filter {
+  margin-bottom: 10px;
+}
+
+.filter__inputs {
+  border: none;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.filter__inputs:focus {
+  outline: none;
+}
+
+.shifts__container {
+  border: 2px solid white;
+  border-radius: 10px;
+
+  padding: 30px;
+  margin: 0 50px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  max-width: fit-content;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  max-width: 250px;
+  padding: 0 20px;
+
+  position: relative;
+}
+
+.card p {
+  font-weight: bold;
+}
+
+.card span {
+  font-weight: normal;
+}
+
+.edit {
+  border: none;
+  border-radius: 50%;
+  background-color: #c86f43;
+
+  position: absolute;
+  top: -13px;
+  right: -13px;
+}
+
+.edit img {
+  width: 26px;
+}
+
+.edit:hover {
+  cursor: pointer;
+}
+
+.zero__shifts__msg {
+  background-color: white;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+
+  grid-column: 1 / span 4;
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .shifts__page__header,
+  .shifts__container {
+    margin-left: 0;
+  }
+
+  .shifts__container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .shifts__page__header {
+    margin-left: 160px;
+  }
+
+  .shifts__container {
+    grid-template-columns: 1fr;
+    margin-left: 160px;
+  }
+}
+
+/* Styles for bigger tablets */
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .shifts__page__header {
+    margin-left: 130px;
+  }
+
+  .shifts__container {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 130px;
+  }
+}
+
+@media screen and (min-width: 1250px) and (max-width: 1545px) {
+  .shifts__page__header {
+    margin-left: 100px;
+  }
+
+  .shifts__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 100px;
+  }
+}

@@ -1,0 +1,35 @@
+.upcoming__shift__container {
+  background-color: white;
+
+  border: 1px solid white;
+  border-radius: 5px;
+
+  width: fit-content;
+  padding: 10px;
+  margin: 50px;
+  margin-bottom: 30px;
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .upcoming__shift__container {
+    margin-left: 0;
+  }
+}
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .upcoming__shift__container {
+    margin-left: 160px;
+  }
+}
+
+/* Styles for bigger tablets */
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .upcoming__shift__container {
+    margin-left: 130px;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="navbar__container">
+  <div>
+    <p class="navbar__welcome__msg">
+      Welcome, {{ authService.userDisplayName || "Guest" }}!
+    </p>
+    <hr class="navbar__hr" />
+
+    <div class="navbar__container__menu__items">
+      <img src="../../../assets/icons/home.png" class="navbar__menu__img" />
+      <a class="navbar__link" routerLink="/home">Home</a>
+    </div>
+
+    <div class="navbar__container__menu__items">
+      <img
+        src="../../../assets/icons/my-shifts.png"
+        class="navbar__menu__img"
+      />
+      <a class="navbar__link" routerLink="/my-shifts">My Shifts</a>
+    </div>
+
+    <div class="navbar__container__menu__items">
+      <img
+        src="../../../assets/icons/add-shift.png"
+        class="navbar__menu__img"
+      />
+      <a class="navbar__link" routerLink="/add-shift">Add shift</a>
+    </div>
+
+    <div class="navbar__container__menu__items">
+      <img src="../../../assets/icons/profile.png" class="navbar__menu__img" />
+      <a class="navbar__link" routerLink="/profile">Profile</a>
+    </div>
+  </div>
+
+  <div>
+    <hr class="navbar__hr" />
+    <div class="navbar__container__menu__items">
+      <img src="../../../assets/icons/log-out.png" class="navbar__menu__img" />
+      <button class="logout__button" (click)="logout()">Log out</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="upcoming__shift__container">
+  <h3>Upcoming shift</h3>
+
+  <ng-container *ngIf="upcomingShift; else noUpcomingShift">
+    <p>
+      Your next shift will be on:
+      <span>{{ upcomingShift.date | date : "longDate" }}</span>
+    </p>
+  </ng-container>
+
+  <ng-template #noUpcomingShift>
+    <p>No upcoming shift. Enjoy your free time!</p>
+  </ng-template>
+</div>

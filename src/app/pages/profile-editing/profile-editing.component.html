@@ -1,0 +1,204 @@
+<div class="profile__page">
+  <div class="profile__container__one">
+    <form
+      [formGroup]="profileForm"
+      (ngSubmit)="onSubmit()"
+      class="edit__profile__form"
+    >
+      <h2 class="edit__profile__title">Account info</h2>
+
+      <p class="successMessage" *ngIf="profileSuccessMessage">
+        Profile updated successfully!
+      </p>
+      <p class="error__messages" *ngIf="profileFormHasErrors">
+        All fields are required.
+      </p>
+
+      <div class="flex__column">
+        <label for="fname">First name</label>
+        <input
+          type="text"
+          class="edit__profile__inputs"
+          id="fname"
+          placeholder="John"
+          formControlName="firstName"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('firstName')?.hasError('minlength') &&
+          profileForm.get('firstName')?.touched
+        "
+      >
+        First name must be at least 2 characters.
+      </div>
+
+      <div class="flex__column">
+        <label for="lname">Last name</label>
+        <input
+          type="text"
+          class="edit__profile__inputs"
+          id="lname"
+          placeholder="Doe"
+          formControlName="lastName"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('lastName')?.hasError('minlength') &&
+          profileForm.get('lastName')?.touched
+        "
+      >
+        Last name must be at least 2 characters.
+      </div>
+
+      <div class="flex__column">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="edit__profile__inputs"
+          id="email"
+          placeholder="john@doe.com"
+          formControlName="email"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('email')?.hasError('pattern') &&
+          profileForm.get('email')?.touched
+        "
+      >
+        Please enter a valid email.
+      </div>
+
+      <div class="flex__column">
+        <label for="age">Age</label>
+        <input
+          type="text"
+          class="edit__profile__inputs"
+          id="age"
+          placeholder="35"
+          formControlName="age"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('age')?.hasError('min') &&
+          profileForm.get('age')?.touched
+        "
+      >
+        Age must be at least 18.
+      </div>
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('age')?.hasError('max') &&
+          profileForm.get('age')?.touched
+        "
+      >
+        Age must be at most 130.
+      </div>
+      <div
+        class="error__messages"
+        *ngIf="
+          profileForm.get('age')?.hasError('pattern') &&
+          profileForm.get('age')?.touched
+        "
+      >
+        Please enter only numbers.
+      </div>
+
+      <button type="submit" class="update__button">UPDATE</button>
+    </form>
+  </div>
+
+  <!--  -->
+  <!-- FORMS SEPARATOR -->
+  <!--  -->
+
+  <div class="profile__container__two">
+    <form
+      [formGroup]="passwordForm"
+      (ngSubmit)="onUpdatePassword()"
+      class="edit__profile__form"
+    >
+      <h2>Password update</h2>
+
+      <p class="error__messages" *ngIf="passwordFormHasErrors">
+        All fields are required.
+      </p>
+
+      <p class="successMessage" *ngIf="passwordSuccessMessage">
+        Password updated successfully!
+      </p>
+
+      <div class="flex__column">
+        <label for="currentPassword">Current password</label>
+        <input
+          type="password"
+          class="edit__profile__inputs"
+          placeholder="type here..."
+          id="currentPassword"
+          formControlName="currentPassword"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          passwordForm.get('currentPassword')?.hasError('') &&
+          passwordForm.get('currentPassword')?.touched
+        "
+      >
+        Wrong current password.
+      </div>
+
+      <div class="flex__column">
+        <label for="newPassword">New password</label>
+        <input
+          type="password"
+          class="edit__profile__inputs"
+          placeholder="type here..."
+          id="newPassword"
+          formControlName="newPassword"
+        />
+      </div>
+
+      <div
+        class="error__messages"
+        *ngIf="
+          passwordForm.get('newPassword')?.hasError('pattern') &&
+          passwordForm.get('newPassword')?.touched
+        "
+      >
+        Password must be at least 6 characters and include an uppercase letter,
+        a lowercase letter, a number, and a special character.
+      </div>
+
+      <div class="flex__column">
+        <label for="confirmNewPassword">Confirm new password</label>
+        <input
+          type="password"
+          class="edit__profile__inputs"
+          placeholder="type here..."
+          id="confirmNewPassword"
+          formControlName="confirmNewPassword"
+        />
+      </div>
+
+      <div class="error__messages" *ngIf="passwordsNotMatch">
+        Passwords do not match.
+      </div>
+
+      <button type="submit" class="update__button">UPDATE</button>
+    </form>
+  </div>
+</div>

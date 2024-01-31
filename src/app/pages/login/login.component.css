@@ -1,0 +1,78 @@
+.login__container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login__form {
+  background-color: white;
+  width: 400px;
+
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+.login__form__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  column-gap: 30px;
+}
+
+.login__title {
+  text-align: center;
+}
+
+.logo__img {
+  margin: auto;
+}
+
+#create__acc {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.login__form__inputs {
+  border: none;
+  border-bottom: 2px solid #c5d0d3;
+}
+
+.login__form__inputs:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.login__button {
+  border: none;
+  border-radius: 3px;
+
+  background-color: #c86f43;
+  color: white;
+
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.login__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#forgot__pwd {
+  font-size: small;
+  color: black;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.error__messages {
+  color: red;
+  font-size: small;
+}

@@ -1,0 +1,81 @@
+<div class="shifts__page__container">
+  <header class="shifts__page__header">
+    <h2 class="shifts__title">My Shifts</h2>
+    <div>
+      <label for="workplace__filter">Filter by workplace: </label>
+      <select
+        id="workplace__filter"
+        class="filter__inputs"
+        [(ngModel)]="selectedWorkplace"
+        (change)="applyFilters()"
+      >
+        <option value="-" disabled selected>Select an option</option>
+        <option value="All">All</option>
+        <option value="Hexagon">Hexagon</option>
+        <option value="Wawiwa">Wawiwa</option>
+        <option value="NewTech">NewTech</option>
+        <option value="Binance">Binance</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="from__date">Filter by date to date: </label>
+      <input
+        type="date"
+        id="from__date"
+        class="filter__inputs"
+        [(ngModel)]="selectedFromDate"
+        (change)="applyFilters()"
+      />
+      <span> - </span>
+      <input
+        type="date"
+        id="to__date"
+        class="filter__inputs"
+        [(ngModel)]="selectedToDate"
+        (change)="applyFilters()"
+      />
+    </div>
+  </header>
+
+  <div class="shifts__container">
+    <ng-container *ngIf="shifts.length > 0; else noShifts">
+      <div class="card" *ngFor="let shift of shifts">
+        <p>
+          ID: <span>{{ shift.id }}</span>
+        </p>
+        <p>
+          Date: <span>{{ shift.date | date }}</span>
+        </p>
+        <p>
+          Started at: <span>{{ shift.startTime }}</span>
+        </p>
+        <p>
+          Ended at: <span>{{ shift.endTime }}</span>
+        </p>
+        <p>
+          Hourly wage:
+          <span>{{ shift.wage | currency : "USD" : "symbol" : "1.2-2" }}</span>
+        </p>
+        <p>
+          Workplace: <span>{{ shift.workplace }}</span>
+        </p>
+        <p>
+          Profit:
+          <span>{{
+            shift.profit | currency : "USD" : "symbol" : "1.2-2"
+          }}</span>
+        </p>
+        <button (click)="edit(shift)" class="edit">
+          <img src="../../../assets/icons/edit.png " />
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  <ng-template #noShifts>
+    <p class="zero__shifts__msg">
+      Oops! It seems you're shift-free for now. Don't worry, you can add a new
+      shift whenever you're ready!
+    </p>
+  </ng-template>
+</div>

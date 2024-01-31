@@ -1,0 +1,172 @@
+<div class="register__container">
+  <form
+    (ngSubmit)="onSubmit()"
+    [formGroup]="registerForm"
+    class="register__form"
+  >
+    <img src="../../../assets/logo.png" class="register__logo" />
+
+    <h2>
+      Ready to join us? <br />
+      Just a few simple steps, and you're in!
+    </h2>
+
+    <p class="successMessage" *ngIf="successMessage">
+      Account successfully created!
+    </p>
+
+    <div class="flex__space__between">
+      <label for="fname">First name</label>
+      <input
+        type="text"
+        class="register__form__inputs"
+        id="fname"
+        placeholder="John"
+        formControlName="fname"
+      />
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('fname')?.hasError('minlength') &&
+        registerForm.get('fname')?.touched
+      "
+    >
+      First name must be at least 2 characters.
+    </div>
+
+    <div class="flex__space__between">
+      <label for="lname">Last name</label>
+      <input
+        type="text"
+        class="register__form__inputs"
+        id="lname"
+        placeholder="Doe"
+        formControlName="lname"
+      />
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('lname')?.hasError('minlength') &&
+        registerForm.get('lname')?.touched
+      "
+    >
+      Last name must be at least 2 characters.
+    </div>
+
+    <div class="flex__space__between">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="register__form__inputs"
+        id="email"
+        placeholder="john@doe.com"
+        formControlName="email"
+      />
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('email')?.hasError('pattern') &&
+        registerForm.get('email')?.touched
+      "
+    >
+      Please enter a valid email.
+    </div>
+
+    <div class="flex__space__between">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="register__form__inputs"
+        id="password"
+        placeholder="yourPassword"
+        formControlName="password"
+      />
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('password')?.hasError('pattern') &&
+        registerForm.get('password')?.touched
+      "
+    >
+      Password must be at least 6 characters and include an uppercase letter, a
+      lowercase letter, a number, and a special character.
+    </div>
+
+    <div class="flex__space__between">
+      <label for="confirm__pwd">Confirm password</label>
+      <input
+        type="password"
+        class="register__form__inputs"
+        id="confirm__pwd"
+        placeholder="repeatPassword"
+        formControlName="confirmPwd"
+      />
+    </div>
+
+    <div class="error__messages" *ngIf="passwordsNotMatch">
+      Passwords do not match.
+    </div>
+
+    <div class="flex__space__between">
+      <label for="age">Age</label>
+      <input
+        type="text"
+        class="register__form__inputs"
+        id="age"
+        placeholder="35"
+        formControlName="age"
+      />
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('age')?.hasError('min') &&
+        registerForm.get('age')?.touched
+      "
+    >
+      Age must be at least 18.
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('age')?.hasError('max') &&
+        registerForm.get('age')?.touched
+      "
+    >
+      Age must be at most 130.
+    </div>
+
+    <div
+      class="error__messages"
+      *ngIf="
+        registerForm.get('age')?.hasError('pattern') &&
+        registerForm.get('age')?.touched
+      "
+    >
+      Please enter only numbers.
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="registerForm.invalid"
+      class="register__button"
+    >
+      REGISTER
+    </button>
+
+    <p>
+      Already a member?
+      <a routerLink="/login" class="back__to__login">Log in</a>
+    </p>
+  </form>
+</div>

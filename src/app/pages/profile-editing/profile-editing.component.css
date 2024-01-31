@@ -1,0 +1,109 @@
+.profile__page {
+  width: 85vw;
+  display: flex;
+}
+
+.profile__container__one,
+.profile__container__two {
+  margin: 50px;
+  width: 500px;
+}
+
+.edit__profile__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  background-color: white;
+  font-weight: bold;
+  padding: 50px;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit__profile__title {
+  max-width: fit-content;
+}
+
+.edit__profile__inputs {
+  border: 1px solid black;
+  border-radius: 5px;
+
+  padding: 5px;
+  margin-top: 3px;
+}
+
+.edit__profile__inputs:focus {
+  outline: none;
+}
+
+.update__button {
+  border: none;
+  border-radius: 5px;
+
+  background-color: #c86f43;
+  color: white;
+
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+.update__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  color: green;
+  margin: 0;
+}
+
+.error__messages {
+  color: red;
+  font-size: small;
+  text-align: left;
+
+  margin: 0;
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .profile__container__one,
+  .profile__container__two {
+    margin-left: 0;
+  }
+}
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .profile__container__one {
+    margin-left: 160px;
+  }
+
+  .profile__page {
+    flex-direction: row;
+  }
+}
+
+/* Styles for bigger tablets */
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .profile__container__one {
+    margin-left: 130px;
+  }
+
+  .profile__page {
+    flex-direction: row;
+  }
+}

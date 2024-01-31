@@ -1,0 +1,58 @@
+.home__container__header {
+  width: 85vw;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.logo__hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, white, transparent);
+}
+
+.earnings__container {
+  background-color: white;
+
+  border: 1px solid white;
+  border-radius: 5px;
+
+  width: fit-content;
+  padding: 10px;
+  margin: 30px 50px;
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .earnings__container {
+    margin-left: 0;
+  }
+}
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .earnings__container {
+    margin-left: 160px;
+  }
+
+  .logo__hr {
+    width: 50%;
+  }
+}
+
+/* Styles for bigger tablets */
+
+@media screen and (min-width: 900px) and (max-width: 1250px) {
+  .earnings__container {
+    margin-left: 130px;
+  }
+
+  .logo__hr {
+    width: 50%;
+  }
+}
