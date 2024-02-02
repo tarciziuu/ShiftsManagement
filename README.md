@@ -1,6 +1,7 @@
 # shiftsEase - Angular Project
 
 shiftsEase is a productivity-focused Angular application tailored for employees and administrators alike. Seamlessly managing work hours, it empowers users to track shifts, calculate earnings, and maintain an organized work history effortlessly.
+The application is designed to be responsive and works seamlessly on various devices, including mobile phones and tablets.
 
 ## Technologies Used
 
