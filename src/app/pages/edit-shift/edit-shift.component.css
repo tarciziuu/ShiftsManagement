@@ -109,6 +109,21 @@
   }
 }
 
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .edit__shift__page {
+    width: 100vw;
+    margin: 60px 0 20px 0;
+  }
+  .edit__shift__container {
+    width: 320px;
+    margin: auto;
+  }
+  .edit__shift__form {
+    padding: 20px;
+  }
+}
+
 /* Styles for bigger screens */
 
 @media screen and (min-width: 1700px) {
@@ -119,16 +134,16 @@
 
 /* Styles for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1350px) {
+@media screen and (min-width: 610px) and (max-width: 899px) {
   .edit__shift__container {
     margin-left: 160px;
-    width: 480px;
+    width: fit-content;
   }
 }
 
 /* Styles for bigger tablets */
 
-@media screen and (min-width: 900px) and (max-width: 1250px) {
+@media screen and (min-width: 900px) and (max-width: 1350px) {
   .edit__shift__container {
     margin-left: 130px;
   }

@@ -111,6 +111,24 @@
   grid-column: 1 / span 4;
 }
 
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .shifts__page__container {
+    width: 100vw;
+  }
+
+  .shifts__container {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
+  .card {
+    padding: 0 10px;
+  }
+  .filter__inputs {
+    margin-top: 5px;
+  }
+}
+
 /* Styles for bigger screens */
 
 @media screen and (min-width: 1700px) {
@@ -126,7 +144,7 @@
 
 /* Styles for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1350px) {
+@media screen and (min-width: 610px) and (max-width: 1350px) {
   .shifts__page__header {
     margin-left: 160px;
   }

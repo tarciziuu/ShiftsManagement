@@ -1,13 +1,21 @@
-<div class="navbar__container">
+<button
+  class="toggle__menu__button"
+  (click)="toggleMenu()"
+  [class.active-menu]="isMenuVisible"
+>
+  <img src="../../../assets/icons/menu.png" />
+</button>
+<div class="navbar__container" [class.show]="isMenuVisible">
   <div>
     <p class="navbar__welcome__msg">
       Welcome, {{ authService.userDisplayName || "Guest" }}!
     </p>
+
     <hr class="navbar__hr" />
 
     <div class="navbar__container__menu__items">
       <img src="../../../assets/icons/home.png" class="navbar__menu__img" />
-      <a class="navbar__link" routerLink="/home">Home</a>
+      <a class="navbar__link" routerLink="/home" (click)="closeMenu()">Home</a>
     </div>
 
     <div class="navbar__container__menu__items">
@@ -15,7 +23,9 @@
         src="../../../assets/icons/my-shifts.png"
         class="navbar__menu__img"
       />
-      <a class="navbar__link" routerLink="/my-shifts">My Shifts</a>
+      <a class="navbar__link" routerLink="/my-shifts" (click)="closeMenu()"
+        >My Shifts</a
+      >
     </div>
 
     <div class="navbar__container__menu__items">
@@ -23,18 +33,22 @@
         src="../../../assets/icons/add-shift.png"
         class="navbar__menu__img"
       />
-      <a class="navbar__link" routerLink="/add-shift">Add shift</a>
+      <a class="navbar__link" routerLink="/add-shift" (click)="closeMenu()"
+        >Add shift</a
+      >
     </div>
 
     <div class="navbar__container__menu__items">
       <img src="../../../assets/icons/profile.png" class="navbar__menu__img" />
-      <a class="navbar__link" routerLink="/profile">Profile</a>
+      <a class="navbar__link" routerLink="/profile" (click)="closeMenu()"
+        >Profile</a
+      >
     </div>
   </div>
 
   <div>
     <hr class="navbar__hr" />
-    <div class="navbar__container__menu__items">
+    <div class="navbar__container__menu__items navbar__container__menu__logout">
       <img src="../../../assets/icons/log-out.png" class="navbar__menu__img" />
       <button class="logout__button" (click)="logout()">Log out</button>
     </div>

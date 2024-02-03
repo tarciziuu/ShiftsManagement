@@ -8,10 +8,20 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  isMenuVisible = false;
+
   constructor(public authService: AuthService, private router: Router) {}
 
   logout() {
     this.authService.logout().then(console.log).catch(console.error);
     this.router.navigate(['/login']);
+  }
+
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
+
+  closeMenu() {
+    this.isMenuVisible = false;
   }
 }

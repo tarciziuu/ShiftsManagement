@@ -74,3 +74,24 @@
   font-weight: bold;
   margin: 0;
 }
+
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .register__container {
+    padding: 10px;
+  }
+
+  .register__form {
+    padding: 0;
+    padding-top: 15px;
+  }
+
+  .flex__space__between {
+    padding: 0 10px;
+  }
+
+  .error__messages {
+    margin-left: 10px;
+    max-width: 180px;
+  }
+}

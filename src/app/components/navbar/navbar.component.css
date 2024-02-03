@@ -1,3 +1,7 @@
+.toggle__menu__button {
+  display: none;
+}
+
 .navbar__container {
   display: flex;
   flex-direction: column;
@@ -59,4 +63,35 @@
 
   width: 1px;
   background-image: linear-gradient(to bottom, transparent, white, transparent);
+}
+
+/* Styles for phones */
+
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .navbar__container {
+    display: none;
+
+    align-items: center;
+    z-index: 1;
+  }
+
+  .navbar__container.show {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #416d6d;
+  }
+
+  .toggle__menu__button {
+    display: block;
+    position: fixed;
+    top: 0;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar__container__menu__logout {
+    padding-left: 35px;
+  }
 }

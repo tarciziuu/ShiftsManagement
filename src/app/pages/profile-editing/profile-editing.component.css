@@ -3,8 +3,7 @@
   display: flex;
 }
 
-.profile__container__one,
-.profile__container__two {
+.profile__container {
   margin: 50px;
   width: 500px;
 }
@@ -75,35 +74,69 @@
   margin: 0;
 }
 
-/* Styles for bigger screens */
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .profile__page {
+    display: block;
+    width: 100vw;
+  }
 
-@media screen and (min-width: 1700px) {
-  .profile__container__one,
-  .profile__container__two {
-    margin-left: 0;
+  .profile__container {
+    width: 320px;
+    margin: auto;
+    padding: 50px 0 10px 0;
+  }
+
+  .edit__profile__form {
+    gap: 10px;
+    padding: 30px;
+  }
+}
+
+/* Styles for smaller tablets */
+
+@media screen and (min-width: 610px) and (max-width: 779px) {
+  .profile__container {
+    margin-left: 155px;
+    margin-right: 5px;
+
+    width: 380px;
+  }
+
+  .profile__page {
+    display: block;
   }
 }
 
 /* Styles for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1350px) {
-  .profile__container__one {
-    margin-left: 160px;
+@media screen and (min-width: 780px) and (max-width: 899px) {
+  .profile__container {
+    margin-left: 150px;
+    margin-right: 5px;
   }
 
   .profile__page {
-    flex-direction: row;
+    display: block;
   }
 }
 
 /* Styles for bigger tablets */
 
-@media screen and (min-width: 900px) and (max-width: 1250px) {
-  .profile__container__one {
+@media screen and (min-width: 900px) and (max-width: 1350px) {
+  .profile__container {
     margin-left: 130px;
   }
 
   .profile__page {
-    flex-direction: row;
+    display: block;
+  }
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .profile__container {
+    margin-left: 0;
   }
 }

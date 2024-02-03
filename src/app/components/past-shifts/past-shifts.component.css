@@ -6,7 +6,7 @@
 
   width: fit-content;
   padding: 10px;
-  margin: 0 50px;
+  margin: 0 5px 0 50px;
 }
 
 .past__shifts__ul {
@@ -21,6 +21,13 @@
   padding: 0;
 }
 
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .past__shifts__container {
+    margin: 30px;
+  }
+}
+
 /* Styles for bigger screens */
 
 @media screen and (min-width: 1700px) {
@@ -29,9 +36,16 @@
   }
 }
 
+/* Styles for smaller tablets */
+@media screen and (min-width: 610px) and (max-width: 699px) {
+  .past__shifts__container {
+    margin-left: 180px;
+  }
+}
+
 /* Styles for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 1350px) {
+@media screen and (min-width: 700px) and (max-width: 1350px) {
   .past__shifts__container {
     margin-left: 160px;
   }

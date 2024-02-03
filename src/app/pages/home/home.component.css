@@ -22,20 +22,34 @@
 
   width: fit-content;
   padding: 10px;
-  margin: 30px 50px;
+  margin: 30px 5px 30px 50px;
 }
 
-/* Styles for bigger screens */
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .home__container__header {
+    width: 100vw;
+  }
 
-@media screen and (min-width: 1700px) {
   .earnings__container {
-    margin-left: 0;
+    margin: 30px;
+  }
+}
+
+/* Styles for smaller tablets */
+@media screen and (min-width: 610px) and (max-width: 699px) {
+  .earnings__container {
+    margin-left: 180px;
+  }
+
+  .logo__hr {
+    width: 35%;
   }
 }
 
 /* Styles for tablets */
 
-@media screen and (min-width: 768px) and (max-width: 900px) {
+@media screen and (min-width: 700px) and (max-width: 900px) {
   .earnings__container {
     margin-left: 160px;
   }
@@ -47,12 +61,20 @@
 
 /* Styles for bigger tablets */
 
-@media screen and (min-width: 900px) and (max-width: 1250px) {
+@media screen and (min-width: 900px) and (max-width: 1350px) {
   .earnings__container {
     margin-left: 130px;
   }
 
   .logo__hr {
     width: 50%;
+  }
+}
+
+/* Styles for bigger screens */
+
+@media screen and (min-width: 1700px) {
+  .earnings__container {
+    margin-left: 0;
   }
 }

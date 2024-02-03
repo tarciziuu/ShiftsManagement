@@ -73,3 +73,10 @@
   color: red;
   font-size: small;
 }
+
+/* Styles for phones */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+  .forgot__pwd__container {
+    width: 365px;
+  }
+}
